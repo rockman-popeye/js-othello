@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+body {
+    background-color: url(https://github.com/oasys-tech/Reversi-5.git);
+}
+
+.container {
+    /* ボタンの余白をなくす */
+    font-size: 0;
+}
+
+#title {
+    text-align: center;
+    color: antiquewhite;
+}
+
+#board {
+    /* 5rem=5文字分の余白 auto=自動→左右中央揃え*/
+    margin: 5rem auto;
+    /* サイズ 縦横４０文字分*/
+    width: 40rem;
+    height: 40rem;
+    /* 色 */
+    background-color: black;
+    /* 1.5文字のサイズの外枠でsolidは実線 */
+    outline: 1.5rem solid;
+    outline-color: black;
+}
+
+.square {
+    width: 5rem;
+    height: 5rem;
+    background-color: green;
+    /* ボタンの中の影なくしてcss他で設定されててもこっちを優先 */
+    box-shadow: none !important;
+    font-size: 2.5rem;
+}
+
+.square[data-owner="black"]{
+    color: black;
+}
+.square[data-owner="white"]{
+    color: white;
+}
+
+.cant-select{
+    background-color: green !important;
+}
+
+
+#controller {
+    /* スクロールしても同じ位置にある右下の矢印 */
+    position: fixed;
+    /* 上と左に１文字分の余白を設けて配置する */
+    top: 1rem;
+    left: 1rem;
+}
